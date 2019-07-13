@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="subject_type">
+        <item>تسميع سورة</item>
+        <item>تسميع صفحة</item>
+    </string-array>
+</resources>

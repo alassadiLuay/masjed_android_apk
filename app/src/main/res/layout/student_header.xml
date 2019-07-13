@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="right"
+
+    android:weightSum="1">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:visibility="invisible"
+        >
+        <TextView
+            android:id="@+id/pages_students_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="0"
+            android:textColor="#fdfdfd" />
+        <TextView
+            android:id="@+id/students_notation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="2dp"
+            android:layout_below="@+id/pages_students_num"
+            android:text="صفحة"
+            android:textColor="#ffffff" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/student_name"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_weight="0.83"
+        android:gravity="right"
+        android:padding="2dp"
+        android:text="Medium Text"
+        android:textColor="#ffffff"
+        android:textSize="24sp" />
+</LinearLayout>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.example.digitalnet.anas.StudentActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/header"
+            android:layout_height="192dp"
+            android:layout_width="match_parent">
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:toolbarId="@+id/toolbar1"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                app:layout_scrollInterpolator="@android:anim/decelerate_interpolator"
+                app:contentScrim="?attr/colorPrimary">
+
+                <ImageView
+                    android:id="@+id/app_bar_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_collapseMode="parallax"
+                    android:src="@drawable/semester_shape"
+                    android:scaleType="centerCrop" />
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    app:theme="@style/ToolBarStyle"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_width="match_parent">
+
+                    <android.support.v7.widget.SearchView
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:gravity="right"
+                        android:id="@+id/action_search"
+                        android:icon="@drawable/abc_ic_search_api_mtrl_alpha"
+                        android:hint="البحث"
+                        android:backgroundTint="#fbfdfd"
+                        app:actionViewClass="android.support.v7.widget.SearchView"
+                        app:showAsAction="ifRoom|collapseActionView" />
+                </android.support.v7.widget.Toolbar>
+
+                <Switch
+                    android:id="@+id/switch1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/action_search"
+                    android:layout_marginTop="60dp"
+                    android:textColor="#FFFFFF"
+                    android:gravity="right"
+                    android:text="أخذ الحضور"
+                    android:textSize="18sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="51dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/switch1"
+                    android:layout_marginTop="75dp">
+
+                    <Button
+                        android:id="@+id/list_select_all"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="15dp"
+                        android:textColor="#FFFFFF"
+                        android:alpha="1"
+                        android:visibility="invisible"
+                        android:background="@drawable/white_b"
+                        android:text="تحديد الجميع" />
+
+                    <Button
+                        android:id="@+id/list_select_none"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_toRightOf="@+id/list_select_all"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="15dp"
+                        android:alpha="1"
+                        android:background="@drawable/white_b"
+                        android:textColor="#FFFFFF"
+                        android:visibility="invisible"
+                        android:text="إلغاء تحديد الجميع" />
+
+                    <Button
+                        android:id="@+id/list_remove_selected_rows"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_toRightOf="@+id/list_select_none"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="15dp"
+                        android:alpha="1"
+                        android:textColor="#FFFFFF"
+                        android:background="@drawable/white_b"
+                        android:visibility="invisible"
+                        android:text="  إرسال الحضور  " />
+
+                    <Button
+                        android:id="@+id/list_select_reverse"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/list_select_none"
+                        android:text="Reverse Select"
+                        android:visibility="invisible" />
+
+                    <Button
+                        android:id="@+id/list_remove_selected_rows_o"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/list_select_reverse"
+                        android:text="حفظ التعديلات"
+                        android:textAlignment="viewEnd" />
+
+                    <!--<Button
+                        android:id="@+id/list_remove_selected_rows"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="50dp"
+                        android:alpha="1"
+                        android:textColor="#FFFFFF"
+                        android:background="@drawable/white_b"
+                        android:visibility="invisible"
+                        android:text="  إرسال الحضور  " />-->
+
+                </RelativeLayout>
+            </android.support.design.widget.CollapsingToolbarLayout>
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/header"
+            android:layout_marginTop="10dp"
+            >
+            <include layout="@layout/content_student" />
+        </android.support.v7.widget.LinearLayoutCompat>
+    </RelativeLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>

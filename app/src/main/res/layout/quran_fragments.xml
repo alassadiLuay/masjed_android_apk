@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="right"
+    android:background="#FFFFFF"
+    android:weightSum="1"
+    >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/row1">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            >
+            <Spinner
+                android:id="@+id/spinner1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/subject_type" />
+
+            <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                android:id="@+id/spinner2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:textAlignment="textEnd"
+                android:layout_below="@+id/spinner1"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="2dp"
+                />
+            <TextView
+                android:id="@+id/Juza_num"
+                android:layout_below="@+id/spinner2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_marginLeft="25dp"
+                android:text="1"
+                android:textColor="#0c0d0c" />
+            <TextView
+                android:id="@+id/static_label2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="2dp"
+                android:layout_below="@+id/Juza_num"
+                android:text="الجزء"
+                android:textColor="#545454" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/static_label1"
+            android:layout_alignParentRight="true"
+            android:layout_width="150dp"
+            android:gravity="right"
+            android:layout_height="40dp"
+            android:text="رقم الجزء"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp"
+            android:padding="2dp"
+            android:textColor="#0a0b0a"
+            android:layout_weight="0.83" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/row1"
+            android:id="@+id/row2">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                >
+                <TextView
+                    android:id="@+id/page_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginLeft="25dp"
+                    android:text="1"
+                    android:textColor="#0c0d0c" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/static_label4"
+                android:layout_alignParentRight="true"
+                android:layout_width="150dp"
+                android:gravity="right"
+                android:layout_height="40dp"
+                android:text="آخر ما تم تسميعه"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"
+                android:padding="2dp"
+                android:textColor="#0a0b0a"
+                android:layout_weight="0.83" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/row2"
+            android:id="@+id/row3">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                >
+                <TextView
+                    android:id="@+id/static_label5"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="150dp"
+                    android:gravity="right"
+                    android:layout_height="40dp"
+                    android:text="ملاحظات"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="5dp"
+                    android:padding="2dp"
+                    android:textColor="#0a0b0a"
+                    android:layout_weight="0.83" />
+
+                <EditText
+                    android:id="@+id/notes"
+                    android:layout_below="@+id/static_label5"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="right"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:backgroundTint="#008FD5"
+                    android:hint="ادخل الملاحظات"
+                    android:maxLines="1"
+                    android:textColorLink="#008FD5" />
+
+                <Button
+                    android:id="@+id/addPage"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="match_parent"
+                    android:layout_height="38dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_below="@+id/notes"
+                    android:layout_gravity="center"
+                    android:alpha="1"
+                    android:background="@drawable/button_shape"
+                    android:text="إضافة القسم المسمع  +" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

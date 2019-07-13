@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:background="@drawable/background"
+        tools:context="com.example.digitalnet.anas.LoginActivity"
+        android:gravity="top"
+        >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="300dp"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:id="@+id/logoLayout"
+            >
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                app:srcCompat="@drawable/logo" />
+
+            <Button
+                android:id="@+id/ip_button"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/logo"
+                android:layout_alignParentTop="true"
+                android:text="IP" />
+
+            <Button
+                android:id="@+id/save_ip_button"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/logo"
+                android:layout_alignTop="@+id/logo"
+                android:visibility="invisible"
+                android:text="تعديل" />
+
+            <EditText
+                android:id="@+id/ipEditText"
+                android:layout_width="194dp"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/logo"
+                android:layout_centerHorizontal="true"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:visibility="invisible"
+                android:text="192.168.137.1" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/logoLayout"
+            android:gravity="center"
+            android:foregroundGravity="center"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="38dp"
+                    android:text="خطأ!، الرجاء إدخال البيانات الصحيحة أو التحقق من صحة الاتصال"
+                    android:textColor="@color/colorError"
+                    android:layout_gravity="center"
+                    android:visibility="invisible"
+                    android:id="@+id/error_message"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="50dp">
+
+                <EditText
+                    android:id="@+id/username"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:gravity="right"
+                    android:backgroundTint="#008FD5"
+                    android:layout_alignParentRight="true"
+                    android:hint=" اسم المستخدم"
+                    android:maxLines="1"
+                    android:textColorLink="#008FD5" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="100dp"
+                android:id="@+id/linearpass">
+
+                <EditText
+                    android:id="@+id/password"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:gravity="right"
+                    android:layout_alignParentRight="true"
+                    android:backgroundTint="#008FD5"
+                    android:hint=" كلمة المرور"
+                    android:maxLines="1"
+                    android:password="true"
+                    android:textColorLink="#008FD5" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/linearpass"
+                android:layout_marginTop="10dp"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/login"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="match_parent"
+                    android:layout_height="38dp"
+                    android:layout_gravity="center"
+                    android:alpha="1"
+                    android:background="@drawable/button_shape"
+                    android:text="تسجيل الدخول" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:text="v0.1.0" />
+        </RelativeLayout>s
+
+    </RelativeLayout>
+</ScrollView>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="right"
+    android:background="#FFFFFF"
+    android:weightSum="1"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        >
+
+        <TextView
+            android:id="@+id/Points_static_label5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_weight="0.83"
+            android:gravity="center"
+            android:padding="2dp"
+            android:text="اختر نوع النقاط"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#008FD5"
+            android:textSize="36sp" />
+<!--
+
+        <EditText
+            android:id="@+id/points"
+            android:layout_below="@+id/Points_static_label5"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="right"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:backgroundTint="#008FD5"
+            android:hint="عدد النقاط"
+            android:maxLines="1"
+            android:textColorLink="#008FD5"
+            android:inputType="number"/>
+-->
+        <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+            android:id="@+id/spinner3"
+            android:layout_below="@+id/Points_static_label5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:textAlignment="textEnd"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="2dp"
+            />
+
+        <EditText
+            android:id="@+id/points_notes"
+            android:layout_below="@+id/spinner3"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="right"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:backgroundTint="#008FD5"
+            android:hint="ملاحظات"
+            android:maxLines="1"
+            android:textColorLink="#008FD5"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:gravity="center"
+            android:layout_below="@+id/points_notes">
+                <Button
+                    android:id="@+id/add"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_gravity="center"
+                    android:alpha="1"
+                    android:background="@drawable/button_shape"
+                    android:text="إرسال النقاط " />
+
+<!--                <Button
+                    android:id="@+id/remove"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_below="@+id/notes"
+                    android:layout_gravity="center"
+                    android:alpha="1"
+                    android:background="@drawable/button_shape"
+                    android:text="حذف نقاط -" />-->
+
+            </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>
